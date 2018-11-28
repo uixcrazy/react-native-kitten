@@ -21,7 +21,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.uixcrazy.reactnativekitten"
+    },
+    "android": {
+      "package": "com.uixcrazy.reactnativekitten"
     }
   }
 }
