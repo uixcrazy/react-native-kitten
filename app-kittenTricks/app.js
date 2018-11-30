@@ -5,6 +5,7 @@ import {
   Font,
 } from 'expo';
 import {
+  createAppContainer,
   createDrawerNavigator,
   createStackNavigator,
 } from 'react-navigation';
@@ -18,7 +19,7 @@ import { data } from './data';
 bootstrap();
 data.populateData();
 
-const KittenApp = createStackNavigator({
+const KittenApp = createAppContainer(createStackNavigator({
   First: {
     screen: Screens.SplashScreen,
   },
@@ -37,7 +38,7 @@ const KittenApp = createStackNavigator({
   },
 }, {
   headerMode: 'none',
-});
+}));
 
 export default class App extends React.Component {
   state = {
