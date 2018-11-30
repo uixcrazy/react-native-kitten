@@ -1,3 +1,6 @@
+/**
+ * check lại
+ */
 import {
   StatusBar,
   StyleSheet,
@@ -11,7 +14,7 @@ import { SocialBarTypes } from '../../app-kittenTricks/components/socialBar/type
 import { scale, scaleVertical } from '../../app-kittenTricks/utils/scale';
 
 export const bootstrap = () => {
-  RkTheme.setTheme(KittenTheme, null);
+  RkTheme.setTheme(KittenTheme, null); // setTime here
 
   /*
    RkText types

@@ -1,5 +1,7 @@
 # react-native-kitten
 
+  > react-native, react-native-ui-kitten, uix-storybook
+
 https://medium.com/@uixcrazy/getting-started-react-native-e60735c211ac
 
 ## Task List
@@ -12,8 +14,11 @@ https://medium.com/@uixcrazy/getting-started-react-native-e60735c211ac
 ## UI framework
 
 - UI Components: https://github.com/akveo/react-native-ui-kitten
-- Demo at here: https://github.com/akveo/kittenTricks/ (Dùng nó như một library support UI)
+- Demo at here: https://github.com/akveo/kittenTricks/
 - Docs: https://akveo.github.io/react-native-ui-kitten/#/docs/quick-start/getting-started
+    - [setTheme](https://akveo.github.io/react-native-ui-kitten/#/docs/quick-start/theme) ::: ```app/config/bootstrap.js```
+
+
 - icon: https://oblador.github.io/react-native-vector-icons/
 
 Other sources:

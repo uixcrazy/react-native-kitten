@@ -1,70 +1,73 @@
 import React from 'react';
 import {
-  View,
-  ScrollView,
+  FlatList,
   TouchableOpacity,
+  View,
+  StyleSheet,
 } from 'react-native';
 import {
   RkText,
   RkStyleSheet,
-  RkCard,
 } from 'react-native-ui-kitten';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { MainRoutes } from '../config/navigation/routes';
+import NavigationType from '../config/navigation/propTypes';
 
-export class Dashboard extends React.Component {
-  static navigationOptions = {
-    title: 'Dashboard'.toUpperCase(),
+export class DashboardScreen extends React.Component {
+  static propTypes = {
+    navigation: NavigationType.isRequired,
+  };
+  // static navigationOptions = {
+  //   title: 'List Menu'.toUpperCase(),
+  // };
+
+  onItemPressed = (item) => {
+    this.props.navigation.navigate(item.id);
   };
 
-  onPressedViewFriendList = () => {
-    this.props.navigation.navigate('ContactsRoutes');
-  }
+  extractItemKey = (item) => item.id;
 
-  render = () => {
-    return (
-      <ScrollView style={styles.screen}>
-        <TouchableOpacity
-          delayPressIn={70}
-          activeOpacity={0.8}
-          onPress={this.onPressedViewFriendList}>
-          <RkCard style={styles.apCard}>
-            <View rkCardHeader style={styles.sMiddle}>
-              <View style={styles.contentNotification}>
-                <RkText rkType='header6'>Friends List</RkText>
-                <RkText rkType='secondary2 hintColor'>101 friends</RkText>
-                <RkText rkType='secondary2 hintColor'>Bạn có <RkText rkType='secondary2' style={styles.labelImpact}>5</RkText> lời mời kết bạn mới</RkText>
-              </View>
-              <Icon name="angle-right" size={35} style={styles.iconNotification} />
-            </View>
-          </RkCard>
-        </TouchableOpacity>
-      </ScrollView>
-    );
-  };
+  renderItem = ({ item }) => (
+    <TouchableOpacity
+      style={styles.item}
+      onPress={() => this.onItemPressed(item)}>
+      <View style={styles.container}>
+        <RkText
+          style={styles.icon}
+          rkType='primary moon xxlarge'>{item.icon}
+        </RkText>
+        <RkText>{item.title}</RkText>
+      </View>
+    </TouchableOpacity>
+  );
+
+  render = () => (
+    <FlatList
+      style={styles.list}
+      data={MainRoutes}
+      keyExtractor={this.extractItemKey}
+      renderItem={this.renderItem}
+    />
+  );
 }
 
 const styles = RkStyleSheet.create(theme => ({
-  screen: {
-    backgroundColor: theme.colors.screen.scroll,
-    paddingHorizontal: 15,
-    paddingTop: 15,
+  item: {
+    height: 80,
+    justifyContent: 'center',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: theme.colors.border.base,
+    paddingHorizontal: 16,
   },
-  apCard: {
-    marginBottom: 10,
+  list: {
+    backgroundColor: theme.colors.screen.base,
   },
-  sMiddle: {
-    justifyContent: 'space-between',
+  container: {
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  contentNotification: {
-    flex: 1,
-  },
-  iconNotification: {
-    opacity: 0.8,
-    color: theme.colors.primary,
-  },
-  labelImpact: {
-    color: '#ff6b5c',
+  icon: {
+    width: 34,
+    textAlign: 'center',
+    marginRight: 16,
   },
 }));
-

@@ -2,42 +2,45 @@ import React from 'react';
 import { View } from 'react-native';
 import {
   AppLoading,
+  Asset,
   Font,
-} from 'expo';
+} from 'expo'; //
 import {
   createDrawerNavigator,
   createStackNavigator,
 } from 'react-navigation';
 import { withRkTheme } from 'react-native-ui-kitten';
 import { AppRoutes } from './config/navigation/routesBuilder';
-import * as Screens from './screens';
+import { SideMenu } from './components';
 import { bootstrap } from './config/bootstrap';
 // import track from './config/analytics';
 import { data } from '../app-kittenTricks/data';
+import { Assets as StackAssets } from 'react-navigation-stack';
 
 bootstrap();
 data.populateData();
 
-const KittenApp = createStackNavigator({
-  // First: {
-  //   screen: Screens.SplashScreen,
-  // },
-  Home: {
-    screen: createDrawerNavigator(
-      {
-        ...AppRoutes,
+const KittenApp = createAppContainer(
+  createStackNavigator(
+    {
+      ...AppRoutes,
+    },
+    {
+      initialRouteName: 'DashboardRoutes',
+      headerMode: 'none',
+      contentComponent: (props) => {
+        // const SideMenu = withRkTheme(Screens.SideMenu);
+        return <SideMenu {...props} />;
       },
-      {
-        contentComponent: (props) => {
-          const SideMenu = withRkTheme(Screens.SideMenu);
-          return <SideMenu {...props} />;
-        },
-      },
-    ),
-  },
-}, {
-  headerMode: 'none',
-});
+
+      /*
+      * Use modal on iOS because the card mode comes from the right,
+      * which conflicts with the drawer example gesture
+      */
+      // mode: Platform.OS === 'ios' ? 'modal' : 'card',
+    }
+  )
+);
 
 export default class App extends React.Component {
   state = {

@@ -5,9 +5,9 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import { DrawerActions } from 'react-navigation';
+import { DrawerActions } from 'react-navigation'; // ??? để là gì
 import { RkText, RkButton, RkStyleSheet } from 'react-native-ui-kitten';
-import { FontAwesome } from '../../app-kittenTricks/assets/icons';
+import { FontAwesome } from '../assets/icons';
 import { UIConstants } from '../config/appConstants';
 import NavigationType from '../config/navigation/propTypes';
 

@@ -1,13 +1,33 @@
 import _ from 'lodash';
-import { FontIcons } from '../../../app-kittenTricks/assets/icons';
+import { FontIcons } from '../../assets/icons';
 import * as Screens from '../../screens/index';
 
-export const MainRoutes = [
+export const MainRoutes = [ // show on SideMenu
   {
     id: 'DashboardRoutes',
-    title: 'Dashboard',
+    title: '-----Dashboard-----',
     icon: FontIcons.dashboard,
-    screen: Screens.Dashboard,
+    screen: Screens.DashboardScreen,
+  },
+  {
+    id: 'ButtonRoutes',
+    title: 'Button',
+    screen: Screens.ButtonScreen,
+  },
+  {
+    id: 'CardRoutes',
+    title: 'Card',
+    screen: Screens.CardScreen,
+  },
+  {
+    id: 'ImageRoutes',
+    title: 'Image',
+    screen: Screens.ImageScreen,
+  },
+  {
+    id: 'GalleryRoutes',
+    title: 'Gallery',
+    screen: Screens.GalleryScreen,
   },
 ];
 
@@ -19,4 +39,4 @@ const menuRoutes = _.cloneDeep(MainRoutes);
 //   children: [],
 // });
 
-export const MenuRoutes = menuRoutes;
+export const MenuRoutes = menuRoutes; // for All App
