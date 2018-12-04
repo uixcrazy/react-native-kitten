@@ -4,9 +4,10 @@ import {
   AppLoading,
   Asset,
   Font,
-} from 'expo'; //
+} from 'expo';
 import {
   createDrawerNavigator,
+  createAppContainer,
   createStackNavigator,
 } from 'react-navigation';
 import { withRkTheme } from 'react-native-ui-kitten';

@@ -15,20 +15,20 @@ export class GalleryScreen extends React.Component {
   static navigationOptions = {
     title: 'Gallery',
   };
+
   static items = [
-    'https://images.unsplash.com/photo-1543504941-5419816abbd1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a03c8577439e99886738facd719f06&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543502421-9d79885218c9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=770c5943c1ee8bd810aac6f2dd532e91&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543499459-d1460946bdc6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e4277e935148bb5633e99c023086b896&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543435957-1c690ff9f25b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=15d44be5f1c07cd441c037c1c286f074&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543467936-ac0f5610b1df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f7853055e3ecf453cdeed021b184f893&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543473111-ac6e23fcd158?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d3ecb71e17f5c89fa478b77e3e6b711a&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543393786-6f30facf16f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8f22fefc3a66a524acf2e659d6b004dc&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543416869-67ba465f3ca8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1e3a6580b2d8c8f75852a06ee2581336&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543352631-6b884eafab2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1067dcec106c57351450905e4216a839&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543393786-6b9844cc148d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ef751854f2926d7a5bc562f0ee3eb2f&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543349689-727c21d183a6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0519c5d6ff63e094b601abff09f136da&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543380415-b5e6f27d29a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1a430340e293f5152ee344d6acf8712&auto=format&fit=crop&w=500&q=60',
-    // require('../img/flowers.jpeg'),
+    require('../assets/images/gallery/flowers.jpeg'),
+    require('../assets/images/gallery/animal.jpeg'),
+    require('../assets/images/gallery/bird.jpeg'),
+    require('../assets/images/gallery/clock.jpg'),
+    require('../assets/images/gallery/fireworks.jpeg'),
+    require('../assets/images/gallery/night.jpeg'),
+    require('../assets/images/gallery/river.jpeg'),
+    require('../assets/images/gallery/sea.jpg'),
+    require('../assets/images/gallery/sun.jpg'),
+    require('../assets/images/gallery/wood.jpeg'),
+    require('../assets/images/gallery/flowers.jpeg'),
+    require('../assets/images/gallery/tree.jpeg'),
   ];
 
   state = {

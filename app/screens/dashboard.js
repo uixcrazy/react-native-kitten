@@ -16,9 +16,10 @@ export class DashboardScreen extends React.Component {
   static propTypes = {
     navigation: NavigationType.isRequired,
   };
-  // static navigationOptions = {
-  //   title: 'List Menu'.toUpperCase(),
-  // };
+
+  static navigationOptions = {
+    title: 'UI KIT',
+  };
 
   onItemPressed = (item) => {
     this.props.navigation.navigate(item.id);

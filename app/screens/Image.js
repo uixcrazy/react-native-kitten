@@ -1,3 +1,6 @@
+/**
+ * RkModalImg ⇢ not good
+ */
 import React from 'react';
 import {
   View,
@@ -20,21 +23,21 @@ export class ImageScreen extends React.Component {
     title: 'Images',
   };
 
-  items = [
-    // require('../img/animal.jpeg'),
-    'https://images.unsplash.com/photo-1543421642-f970c031a366?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19a2533f3ffc1afbb408f7b598b57aae&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1543422458-2c9536b31ff4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9b1abd1c8928cc3fd5f91c31aa0c82ad&auto=format&fit=crop&w=500&q=60',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
-    // '',
+  static items = [
+    require('../assets/images/gallery/flowers.jpeg'),
+    require('../assets/images/gallery/animal.jpeg'),
+    require('../assets/images/gallery/bird.jpeg'),
+    require('../assets/images/gallery/clock.jpg'),
+    require('../assets/images/gallery/fireworks.jpeg'),
+    require('../assets/images/gallery/night.jpeg'),
+    require('../assets/images/gallery/river.jpeg'),
+    require('../assets/images/gallery/sea.jpg'),
+    require('../assets/images/gallery/sun.jpg'),
+    require('../assets/images/gallery/wood.jpeg'),
+    require('../assets/images/gallery/flowers.jpeg'),
+    require('../assets/images/gallery/tree.jpeg'),
   ];
+
   imageSize = (Dimensions.get('window').width - 16) / 3;
 
   extractGalleryItemKey = (item, index) => index.toString();
@@ -46,10 +49,10 @@ export class ImageScreen extends React.Component {
   renderCustomHeader = (options) => (
     <View style={styles.customHeader}>
       <RkButton
-        rkType='clear'
+        rkType='clear link'
         onPress={options.closeImage}>Close
       </RkButton>
-      <RkButton rkType='clear'>
+      <RkButton rkType='clear link'>
         <Icon style={styles.dot} name="circle" />
         <Icon style={styles.dot} name="circle" />
         <Icon style={styles.dot} name="circle" />
@@ -109,15 +112,18 @@ export class ImageScreen extends React.Component {
             <View style={[UtilStyles.rowContainer, { paddingLeft: 2 }]}>
               <RkModalImg
                 style={{ width: this.imageSize, height: this.imageSize }}
-                source={require('../img/animal.jpeg')}
+                renderHeader={this.renderCustomHeader}
+                source={{uri: "https://images.unsplash.com/photo-1543840302-34f367d7024f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
               <RkModalImg
                 style={{ width: this.imageSize, height: this.imageSize }}
-                source={require('../img/clock.jpg')}
+                renderHeader={this.renderCustomHeader}
+                source={{uri: "https://images.unsplash.com/photo-1543825440-1ec8c14f5a28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
               <RkModalImg
                 style={{ width: this.imageSize, height: this.imageSize }}
-                source={require('../img/post2.png')}
+                renderHeader={this.renderCustomHeader}
+                source={{uri: "https://images.unsplash.com/photo-1543765457-b0842e5586b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
             </View>
           </View>
@@ -129,19 +135,19 @@ export class ImageScreen extends React.Component {
                 renderHeader={this.renderCustomHeader}
                 renderFooter={this.renderCustomFooter}
                 headerContentStyle={{ backgroundColor: 'red' }}
-                source={require('../img/post1.png')}
+                source={{uri: "https://images.unsplash.com/photo-1543829012-fd36bb643fce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
               <RkModalImg
                 style={{ width: this.imageSize, height: this.imageSize }}
                 renderHeader={this.renderCustomHeader}
                 renderFooter={this.renderCustomFooter}
-                source={require('../img/river.jpeg')}
+                source={{uri: "https://images.unsplash.com/photo-1543810243-5dfc130b94ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
               <RkModalImg
                 style={{ width: this.imageSize, height: this.imageSize }}
                 renderHeader={this.renderCustomHeader}
                 renderFooter={this.renderCustomFooter}
-                source={require('../img/post3.png')}
+                source={{uri: "https://images.unsplash.com/photo-1543812801-6e4913552e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}
               />
             </View>
           </View>
@@ -175,6 +181,8 @@ let styles = RkStyleSheet.create(theme => ({
     flexDirection: 'row',
   },
   customFooter: {
+    color: '#555',
+    opacity: .2,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',

@@ -1,6 +1,3 @@
-/**
- * check lại
- */
 import {
   StatusBar,
   StyleSheet,
@@ -75,6 +72,10 @@ export const bootstrap = () => {
   });
 
   // theme text styles
+  RkTheme.setType('RkText', 'header', {
+    fontSize: theme => theme.fonts.sizes.h1,
+    fontFamily: theme => theme.fonts.family.bold,
+  });
   RkTheme.setType('RkText', 'header1', {
     fontSize: theme => theme.fonts.sizes.h1,
     fontFamily: theme => theme.fonts.family.bold,
@@ -148,6 +149,36 @@ export const bootstrap = () => {
     text: {
       textAlign: 'center',
     },
+  });
+
+  RkTheme.setType('RkText', 'cardText', {
+    color: '#555',
+    fontFamily: theme => theme.fonts.family.light,
+    text: {
+      lineHeight: 20,
+    },
+  });
+
+  RkTheme.setType('RkText', 'compactCardText', {
+    fontSize: 14,
+    color: '#555',
+    fontFamily: theme => theme.fonts.family.light,
+    text: {
+      lineHeight: 20,
+      letterSpacing: -0.1,
+    },
+  });
+
+  RkTheme.setType('RkText', 'accent', {
+    color: RkTheme.colors.accent,
+  });
+
+  RkTheme.setType('RkText', 'hint', {
+    color: RkTheme.current.colors.text.hint,
+  });
+
+  RkTheme.setType('RkText', 'inverse', {
+    color: RkTheme.current.colors.text.inverse,
   });
 
   RkTheme.setType('RkText', 'chat', {

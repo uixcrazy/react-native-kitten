@@ -4,12 +4,6 @@ import * as Screens from '../../screens/index';
 
 export const MainRoutes = [ // show on SideMenu
   {
-    id: 'DashboardRoutes',
-    title: '-----Dashboard-----',
-    icon: FontIcons.dashboard,
-    screen: Screens.DashboardScreen,
-  },
-  {
     id: 'ButtonRoutes',
     title: 'Button',
     screen: Screens.ButtonScreen,
@@ -32,11 +26,13 @@ export const MainRoutes = [ // show on SideMenu
 ];
 
 const menuRoutes = _.cloneDeep(MainRoutes);
-// menuRoutes.unshift({
-//   id: 'GridV2',
-//   title: 'Start',
-//   screen: Screens.GridV2,
-//   children: [],
-// });
+menuRoutes.unshift(
+  {
+    id: 'DashboardRoutes',
+    title: '-----Dashboard-----',
+    icon: FontIcons.dashboard,
+    screen: Screens.DashboardScreen,
+  },
+);
 
 export const MenuRoutes = menuRoutes; // for All App

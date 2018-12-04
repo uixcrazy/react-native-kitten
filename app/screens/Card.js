@@ -31,29 +31,29 @@ export class CardScreen extends React.Component {
           <RkCard>
             <View rkCardHeader={true}>
               <View>
-                <RkText rkType='header'>Header</RkText>
+                <RkText rkType='header3'>Header</RkText>
                 <RkText rkType='subtitle'>Subtitle</RkText>
               </View>
             </View>
-            <Image rkCardImg={true} source={require('../img/post1.png')} />
+            <Image rkCardImg={true} source={{uri: "https://images.unsplash.com/photo-1543421642-f970c031a366"}} />
             <View rkCardContent={true}>
               <RkText rkType='cardText'>
                 Far far away, behind the word mountains, far from the
                 countries Vokalia and Consonantia, there live the blind texts.
               </RkText>
             </View>
-            <View rkCardFooter={true}>
+            <View rkCardFooter={true} style={styles.footer}>
               <RkButton rkType='clear link'>
                 <Icon name="heart" style={likeStyle} />
-                <RkText rkType='accent'>18 Likes</RkText>
+                <RkText rkType='accent' style={styles.footerFontSize}>18 Likes</RkText>
               </RkButton>
               <RkButton rkType='clear link'>
                 <Icon name="comment-o" style={iconButton} />
-                <RkText rkType='hint'>2 Comments</RkText>
+                <RkText rkType='hint' style={styles.footerFontSize}>2 Comments</RkText>
               </RkButton>
               <RkButton rkType='clear link'>
                 <Icon name="send-o" style={iconButton} />
-                <RkText rkType='hint'>6 Shares</RkText>
+                <RkText rkType='hint' style={styles.footerFontSize}>6 Shares</RkText>
               </RkButton>
             </View>
           </RkCard>
@@ -64,7 +64,7 @@ export class CardScreen extends React.Component {
                 <RkText rkType='subtitle'>Subtitle</RkText>
               </View>
             </View>
-            <Image rkCardImg={true} source={require('../img/post2.png')} />
+            <Image rkCardImg={true} source={{uri: "https://images.unsplash.com/photo-1543467936-ac0f5610b1df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f7853055e3ecf453cdeed021b184f893&auto=format&fit=crop&w=500&q=60s"}} />
             <View rkCardContent={true}>
               <RkText rkType='cardText'>
                 Far far away, behind the word mountains, far from the
@@ -89,9 +89,9 @@ export class CardScreen extends React.Component {
           <RkCard>
             <View rkCardHeader={true}>
               <View style={{ flexDirection: 'row' }}>
-                <Image source={require('../img/avatar1.png')} style={styles.avatar} />
+                <Image source={{uri: "https://uinames.com/api/photos/female/17.jpg"}} style={styles.avatar} />
                 <View style={{}}>
-                  <RkText rkType='header'>Elena Zhukova</RkText>
+                  <RkText rkType='header5'>Elena Zhukova</RkText>
                   <RkText rkType='subtitle'>6 minutes ago</RkText>
                 </View>
               </View>
@@ -124,7 +124,7 @@ export class CardScreen extends React.Component {
           </RkCard>
           <RkCard rkType='shadowed'>
             <View>
-              <Image rkCardImg={true} source={require('../img/post3.png')} />
+              <Image rkCardImg={true} source={{uri: "https://unsplash.com/photos/mm8pTk1-chE"}} />
               <View rkCardImgOverlay={true} />
             </View>
             <RkButton rkType='circle accent-bg' style={styles.floating}>
@@ -151,7 +151,7 @@ export class CardScreen extends React.Component {
           </RkCard>
           <RkCard rkType='shadowed'>
             <View>
-              <Image rkCardImg={true} source={require('../img/post4.png')} />
+              <Image rkCardImg={true} source={{uri: "https://unsplash.com/photos/hG8TiCJ9bXA"}} />
               <View rkCardImgOverlay={true} style={styles.overlay}>
                 <RkText rkType='header xxlarge' style={{ color: 'white' }}>Header</RkText>
               </View>
@@ -179,7 +179,7 @@ export class CardScreen extends React.Component {
           </RkCard>
           <RkCard rkType='heroImage shadowed'>
             <View>
-              <Image rkCardImg={true} source={require('../img/post5.png')} />
+              <Image rkCardImg={true} source={{uri: "https://images.unsplash.com/photo-1543842025-c7fc5de13626?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}}/>
               <View rkCardImgOverlay={true} style={styles.overlay}>
                 <View style={{ marginBottom: 20 }}>
                   <RkText rkType='header xxlarge' style={{ color: 'white' }}>Header</RkText>
@@ -230,6 +230,9 @@ let styles = StyleSheet.create({
   },
   footer: {
     marginHorizontal: 16,
+  },
+  footerFontSize: {
+    fontSize: 12,
   },
   avatar: {
     width: 42,

@@ -12,8 +12,8 @@ import {
   RkText,
   RkTheme,
 } from 'react-native-ui-kitten';
-import { MainRoutes } from '../../config/navigation/routes';
-import { FontAwesome } from '../../assets/icons';
+import { MainRoutes } from '../config/navigation/routes';
+import { FontAwesome } from '../assets/icons';
 import NavigationType from '../config/navigation/propTypes';
 
 export class SideMenu extends React.Component {
@@ -26,7 +26,7 @@ export class SideMenu extends React.Component {
   };
 
   renderIcon = () => (
-    <Image style={styles.icon} source={require('../../assets/images/smallLogo.png')} />
+    <Image style={styles.icon} source={require('../assets/images/smallLogo.png')} />
   );
 
   renderMenu = () => MainRoutes.map(this.renderMenuItem);

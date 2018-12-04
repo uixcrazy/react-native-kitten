@@ -69,7 +69,8 @@ const Fonts = {
   logo: 'Righteous-Regular',
 };
 
-const FontBaseValue = scale(18);
+// const FontBaseValue = scale(18);
+const FontBaseValue = scale(14);
 
 export const KittenTheme = {
   name: 'light',
