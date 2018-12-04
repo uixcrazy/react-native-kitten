@@ -41,14 +41,17 @@ export class DashboardScreen extends React.Component {
     </TouchableOpacity>
   );
 
-  render = () => (
-    <FlatList
-      style={styles.list}
-      data={MainRoutes}
-      keyExtractor={this.extractItemKey}
-      renderItem={this.renderItem}
-    />
-  );
+  render = () => {
+    const DashboardRoutes = MainRoutes.filter(router => (router.id !== 'DashboardRoutes'));
+    return (
+      <FlatList
+        style={styles.list}
+        data={DashboardRoutes}
+        keyExtractor={this.extractItemKey}
+        renderItem={this.renderItem}
+      />
+    )
+  };
 }
 
 const styles = RkStyleSheet.create(theme => ({
