@@ -9,7 +9,13 @@ https://medium.com/@uixcrazy/getting-started-react-native-e60735c211ac
 - [ ] style loading icon
 - [ ] Building Standalone Apps - chỉ đơn giản cần đóng gói packages dễ dàng test
 - [ ] Add [eslint](https://www.npmjs.com/package/eslint-plugin-react-native)
-- [ ] Update "react-navigation": "^3.*.*",
+- [x] Update "react-navigation": "^3.*.*",
+- [ ] Create Menu Button
+- [ ] Create screen show user infomation - (get API from https://uinames.com/api/?ext&amount=25&region=united+states&gender=random)
+
+#### Get Icons
+
+```import MaterialIcons from 'react-native-vector-icons/MaterialIcons'```
 
 ## UI framework
 

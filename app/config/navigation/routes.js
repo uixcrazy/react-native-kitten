@@ -29,6 +29,11 @@ export const MainRoutes = [ // show on SideMenu
     title: 'Gallery',
     screen: Screens.GalleryScreen,
   },
+  {
+    id: 'VictoryChartRoutes',
+    title: 'Victory Chart',
+    screen: Screens.VictoryChart,
+  },
 ];
 
 const menuRoutes = _.cloneDeep(MainRoutes);
