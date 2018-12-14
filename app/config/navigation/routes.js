@@ -34,6 +34,11 @@ export const MainRoutes = [ // show on SideMenu
     title: 'Victory Chart',
     screen: Screens.VictoryChart,
   },
+  {
+    id: 'CommentBoxRoutes',
+    title: 'Comment Box',
+    screen: Screens.CommentBox,
+  },
 ];
 
 const menuRoutes = _.cloneDeep(MainRoutes);

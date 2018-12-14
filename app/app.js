@@ -27,7 +27,7 @@ const KittenApp = createAppContainer(
           ...AppRoutes,
         },
         {
-          initialRouteName: 'DashboardRoutes',
+          initialRouteName: 'CommentBoxRoutes',
           contentComponent: (props) => {
             const FinalSideMenu = withRkTheme(SideMenu);
             return <FinalSideMenu {...props} />;

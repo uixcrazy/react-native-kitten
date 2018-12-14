@@ -5,3 +5,4 @@ export * from './Card';
 export * from './Image';
 export * from './Gallery';
 export * from './VictoryChart';
+export * from './CommentBox';

@@ -20,7 +20,7 @@ export class VictoryChart extends React.Component {
     title: 'Victory Chart'.toUpperCase(),
   };
 
-  render = () => {
+  render() {
     const chartBackgroundStyle = { backgroundColor: RkTheme.current.colors.control.background };
     return (
       <ScrollView style={styles.screen}>

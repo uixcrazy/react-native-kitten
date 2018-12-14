@@ -41,7 +41,7 @@ export class DashboardScreen extends React.Component {
     </TouchableOpacity>
   );
 
-  render = () => {
+  render() {
     const DashboardRoutes = MainRoutes.filter(router => (router.id !== 'DashboardRoutes'));
     return (
       <FlatList
